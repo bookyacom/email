@@ -1,7 +1,6 @@
 'use strict';
 
 var assert   = require('assert');
-var config   = require('config');
 var debug    = require('debug')('email');
 var mandrill = require('mandrill-api/mandrill');
 var swig     = require('swig');
