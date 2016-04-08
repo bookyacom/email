@@ -2,15 +2,15 @@
   "name": "mailer-lib",
   "version": "1.0.0",
   "description": "Provides convient email sending functionality on top of mandrill api",
-  "main": "email.js",
+  "main": "index.js",
   "dependencies": {
     "assert": "^1.3.0",
     "debug": "^2.2.0",
-    "mandrill-api": "^1.0.45",
+    "mailgun-js": "^0.7.7",
     "swig": "^1.4.2"
   },
   "scripts": {
-    "test": "test"
+    "test": "ava test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/bookyacom/email/issues"
   },
-  "homepage": "https://github.com/bookyacom/email#readme"
+  "homepage": "https://github.com/bookyacom/email#readme",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "xo": "^0.13.0"
+  },
+  "xo": {
+    "esnext": false,
+    "rules": {
+      "quote-props": [
+        "error",
+        "consistent"
+      ]
+    }
+  }
 }
