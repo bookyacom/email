@@ -1,4 +1,4 @@
-# A mail query builder
+# A mail query builder [![Dependency Status](https://gemnasium.com/badges/github.com/bookyacom/email.svg)](https://gemnasium.com/github.com/bookyacom/email)
 > A mail query builder using swig templating and mailgun js
 
 ## Example
