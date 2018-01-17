@@ -21,6 +21,7 @@ function Email(config) {
 	this._subject = '';
 	this._locals = {};
 	this._content = '';
+	this._attachment = [];
 }
 
 Email.prototype.template = function (name) {
@@ -50,6 +51,7 @@ Email.prototype.send = function () {
 		'html': rendered,
 		'subject': this._subject || '',
 		'from': this._sender.name + ' <' + this._sender.email + '> ',
+		'attachment': this._attachment,
 		'h:Reply-To': this._sender.reply || this._sender.email,
 		'o:tracking-opens': 'yes', // this.metric.opens,
 		'o:tracking-clicks': 'yes' // this.metric.clicks
@@ -144,5 +146,13 @@ Email.prototype.file = function (file, locals) {
 
 Email.prototype.text = function (value) {
 	this._textContent = value;
+	return this;
+};
+
+Email.prototype.attachment = function (filePath) {
+	if (filePath) {
+		this._attachment = filePath;
+	}
+
 	return this;
 };
